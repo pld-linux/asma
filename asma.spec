@@ -2,7 +2,7 @@ Summary:	ASMA - the Atari Sap Music Archive
 Summary(pl):	ASMA - archiwum muzyki w formacie SAP
 Name:		asma
 Version:	2.6
-%define		_ver	%(echo %version | tr -d .)
+%define		_ver	%(echo %{version} | tr -d .)
 Release:	1
 License:	various, not distributable
 Group:		Applications/Sound
