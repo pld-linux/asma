@@ -7,7 +7,6 @@ Release:	1
 License:	various, not distributable
 Group:		Applications/Sound
 Source0:	http://asma.dspaudio.com/bin/%{name}%{_ver}.zip
-# Source0-md5:	ca489cfa5e4951c1f1f9fac0307e7f9c
 NoSource:	0
 URL:		http://asma.dspaudio.com/
 BuildRequires:	unzip
