@@ -10,7 +10,7 @@ Source0:	http://asma.dspaudio.com/bin/%{name}%{_ver}.zip
 NoSource:	0
 URL:		http://asma.dspaudio.com/
 BuildRequires:	unzip
-Buildarch:	noarch
+BuildArch:	noarch
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
