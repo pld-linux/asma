@@ -7,10 +7,9 @@ License:	Various
 Group:		Applications/Sound
 Source0:	http://asma.dspaudio.com/bin/%{name}24.zip
 NoSource:	0
-URL:		http://asma.dspaudio.com
-Buildarch:	noarch
-Requires:	sapplay
+URL:		http://asma.dspaudio.com/
 BuildRequires:	unzip
+Buildarch:	noarch
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
@@ -21,11 +20,11 @@ Atari tunes while the number of them should grow rapidly.
 %description -l pl
 Archiwum Muzyki W Formacie SAP (ASMA) jest kolekcj± muzyki pochodz±cej
 z Atari XL/XE w formacie odgrywalnym przez SAP player. Archiwum
-zawiera setki najlepszych melodii z atari i ci±gle siê powiêksza.
+zawiera setki najlepszych melodii z Atari i ci±gle siê powiêksza.
 
 %prep
 %setup -q -c
-unzip files.zip
+unzip -q files.zip
 
 %install
 rm -rf $RPM_BUILD_ROOT
@@ -38,4 +37,4 @@ rm -rf $RPM_BUILD_ROOT
 %files
 %defattr(644,root,root,755)
 %doc ASMA/Docs/*
-%{_datadir}/asma/*
+%{_datadir}/asma
