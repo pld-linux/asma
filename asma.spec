@@ -1,15 +1,16 @@
 Summary:	ASMA - the Atari Sap Music Archive
-Summary(pl):	ASMA - archiwum muzyki w formacie SAP
+Summary(pl):	ASMA - archiwum muzyki z Atari w formacie SAP
 Name:		asma
-Version:	2.6
+Version:	3.1
 %define		_ver	%(echo %{version} | tr -d .)
 Release:	1
 License:	various, not distributable
 Group:		Applications/Sound
-Source0:	http://asma.dspaudio.com/bin/%{name}%{_ver}.zip
+Source0:	http://asma.atari.org/bin/%{name}%{_ver}.rar
+# NoSource0-md5:	bcdfb7e5af3a39e9d4608a710f8aef1a
 NoSource:	0
-URL:		http://asma.dspaudio.com/
-BuildRequires:	unzip
+URL:		http://asma.atari.org/
+BuildRequires:	unrar
 BuildArch:	noarch
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
@@ -24,13 +25,14 @@ z Atari XL/XE w formacie odgrywalnym przez SAP player. Archiwum
 zawiera setki najlepszych melodii z Atari i ci±gle siê powiêksza.
 
 %prep
-%setup -q -c
-unzip -q files.zip
+%setup -q -c -T
+unrar x -idq %{SOURCE0}
+unrar x -idq files.rar
 
 %install
 rm -rf $RPM_BUILD_ROOT
 install -d $RPM_BUILD_ROOT%{_datadir}/asma/{Classics,Demos,Games,Unsorted,Various}
-cp -r ASMA/{Classics,Demos,Games,Unsorted,Various} $RPM_BUILD_ROOT%{_datadir}/asma/
+cp -r ASMA/{Classics,Demos,Games,Unsorted,Various} $RPM_BUILD_ROOT%{_datadir}/asma
 
 %clean
 rm -rf $RPM_BUILD_ROOT
