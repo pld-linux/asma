@@ -1,5 +1,5 @@
 Summary:	ASMA - the Atari Sap Music Archive
-Summary(pl):	ASMA - archiwum muzyki z Atari w formacie SAP
+Summary(pl.UTF-8):   ASMA - archiwum muzyki z Atari w formacie SAP
 Name:		asma
 Version:	3.1
 %define		_ver	%(echo %{version} | tr -d .)
@@ -19,10 +19,10 @@ Atari SAP music archive is a collection of the Atari XL/XE music in a
 format playable by the SAP player. It contains hundreds of the best
 Atari tunes while the number of them should grow rapidly.
 
-%description -l pl
-Archiwum muzyki w formacie SAP (ASMA) jest kolekcj± muzyki pochodz±cej
+%description -l pl.UTF-8
+Archiwum muzyki w formacie SAP (ASMA) jest kolekcjÄ… muzyki pochodzÄ…cej
 z Atari XL/XE w formacie odgrywalnym przez SAP player. Archiwum
-zawiera setki najlepszych melodii z Atari i ci±gle siê powiêksza.
+zawiera setki najlepszych melodii z Atari i ciÄ…gle siÄ™ powiÄ™ksza.
 
 %prep
 %setup -q -c -T
